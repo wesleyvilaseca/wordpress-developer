@@ -8,13 +8,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Document Title
-	============================================= -->
-    <title>Index Template</title>
-
 </head>
 
-<body <?php body_class('stretched no-transition'); ?> >
+<body <?php body_class('stretched no-transition'); ?>>
 
     <!-- Document Wrapper
   ============================================= -->
@@ -28,11 +24,19 @@
                     <!-- Top Links
           ============================================= -->
                     <div class="top-links">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">FAQs</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                        <div>
+                            <?php
+                            if (has_nav_menu('secondary')) {
+                                wp_nav_menu([
+                                    'theme_location'    => 'secondary',
+                                    'container'         => false,
+                                    'fallback_cb'       => false, //this key allows to call a function display a default menu, false to not want to display a default menu or html
+                                    'deph'              => 1, // how manu submenus the use can have currently
+                                    // 'menu_class'        => 'classes'
+                                ]);
+                            }
+                            ?>
+                        </div>
                     </div><!-- .top-links end -->
 
                 </div>
@@ -84,11 +88,21 @@
             <div class="container clearfix">
 
                 <div id="logo">
-                    <a href="#" class="standard-logo">Udemy</a>
+                    <?php
+                    if (has_custom_logo()) :
+                        the_custom_logo();
+                    else :
+                    ?>
+                        <a href="<?php echo home_url('/') ?>" class="standard-logo"><?php bloginfo(); ?></a>
+                    <?php endif; ?>
                 </div><!-- #logo end -->
 
                 <div class="top-advert">
-                    <img src="assets/images/magazine/ad.png">
+                    <?php
+                    if (function_exists('quads_ad')) {
+                        echo quads_ad(['location' => 'codeVilaTheme_header']);
+                    }
+                    ?>
                 </div>
 
             </div>
@@ -114,20 +128,6 @@
                             ]);
                         }
                         ?>
-
-                        <div>
-                            <?php
-                            if (has_nav_menu('secondary')) {
-                                wp_nav_menu([
-                                    'theme_location'    => 'primary',
-                                    'container'         => false,
-                                    'fallback_cb'       => false, //this key allows to call a function display a default menu, false to not want to display a default menu or html
-                                    'deph'              => 1, // how manu submenus the use can have currently
-                                    // 'menu_class'        => 'classes'
-                                ]);
-                            }
-                            ?>
-                        </div>
 
                         <!-- Top Cart
             ============================================= -->
