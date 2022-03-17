@@ -24,7 +24,8 @@ function ju_social_customizer_section($wp_customize)
 
     $wp_customize->add_section('ju_social_section', [
         'title'     => __('Code Vila Social Settings', 'codeVilaTheme'),
-        'priority'  => 30
+        'priority'  => 30,
+        'panel'         => 'codeVilaTheme'
     ]);
 
     $wp_customize->add_control(new WP_Customize_Control(

@@ -1,40 +1,51 @@
+<footer id="footer" class="dark">
 
-    <footer id="footer" class="dark">
+    <div id="copyrights">
 
-<div id="copyrights">
+        <div class="container clearfix">
 
-    <div class="container clearfix">
+            <div class="col_half">
+                <?php echo get_theme_mod('ju_footer_cpoyright_text') ?><br>
+                <?php if (get_theme_mod('ju_report_file')) : ?>
+                    <a href="<?php echo get_theme_mod('ju_report_file') ?>"> Download report file </a>
+                <?php endif; ?>
 
-        <div class="col_half">
-            Copyrights &copy; 2017 All Rights Reserved by Udemy.<br>
-            <div class="copyright-links">
-                <a href="#">Privacy Policy</a>
-            </div>
-        </div>
+                <div class="copyright-links">
+                    <?php if (get_theme_mod('ju_footer_tos_page')) : ?>
+                        <a href="<?php the_permalink(get_theme_mod('ju_footer_tos_page')) ?>">Terms of use</a>
+                    <?php endif ?>
 
-        <div class="col_half col_last tright">
-            <div class="fright clearfix">
-                <a href="#" class="social-icon si-small si-borderless si-facebook">
-                    <i class="icon-facebook"></i>
-                    <i class="icon-facebook"></i>
-                </a>
+                    <?php if (get_theme_mod('ju_footer_privacy_page')) : ?>
+                        <a href="<?php the_permalink(get_theme_mod('ju_footer_privacy_page')) ?>">Privacy Policy</a>
+                    <?php endif ?>
 
-                <a href="#" class="social-icon si-small si-borderless si-twitter">
-                    <i class="icon-twitter"></i>
-                    <i class="icon-twitter"></i>
-                </a>
+                </div>
 
             </div>
 
-            <div class="clear"></div>
+            <div class="col_half col_last tright">
+                <div class="fright clearfix">
+                    <a href="#" class="social-icon si-small si-borderless si-facebook">
+                        <i class="icon-facebook"></i>
+                        <i class="icon-facebook"></i>
+                    </a>
 
-            <i class="icon-envelope2"></i> info@email.com <span class="middot">&middot;</span>
-            <i class="icon-headphones"></i> +55-5-5555-5555
+                    <a href="#" class="social-icon si-small si-borderless si-twitter">
+                        <i class="icon-twitter"></i>
+                        <i class="icon-twitter"></i>
+                    </a>
+
+                </div>
+
+                <div class="clear"></div>
+
+                <i class="icon-envelope2"></i> info@email.com <span class="middot">&middot;</span>
+                <i class="icon-headphones"></i> +55-5-5555-5555
+            </div>
+
         </div>
 
-    </div>
-
-</div><!-- #copyrights end -->
+    </div><!-- #copyrights end -->
 
 </footer><!-- #footer end -->
 </div><!-- #wrapper end -->

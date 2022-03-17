@@ -25,6 +25,31 @@ function ju_enqueue()
     wp_enqueue_style('ju_responsive');
     wp_enqueue_style('ju_custom');
 
+    $read_mode_color = get_theme_mod('ju_read_more_color');
+    wp_add_inline_style(
+        'ju_custom',
+        'a.more-link{color: ' . $read_mode_color . '; border-color: ' . $read_mode_color . ';}'
+    );
+
+    $title_post = get_theme_mod('ju_post_title_color');
+    wp_add_inline_style(
+        'ju_custom',
+        '.entry-title h2 a{color: ' . $title_post . '; border-color: ' . $title_post . ';}'
+    );
+
+    $title_post_hover = get_theme_mod('ju_post_title_color_hover');
+    wp_add_inline_style(
+        'ju_custom',
+        '.entry-title h2 a:hover{color: ' . $title_post_hover . '; border-color: ' . $title_post_hover . ';}'
+    );
+
+    // $read_mode_color = get_theme_mod('title_post');
+    // wp_add_inline_style(
+    //     'ju_custom',
+    //     'entry-title{color: ' . $read_mode_color . '; border-color: ' . $read_mode_color . ';}'
+    // );
+
+
     //name register | route | depends on another scripts | script version | load script on final 
     wp_register_script('ju_plugins', $uri . '/assets/js/plugins.js', [], $ver, $in_footer = true);
     wp_register_script('ju_functions', $uri . '/assets/js/functions.js', [], $ver, true);
