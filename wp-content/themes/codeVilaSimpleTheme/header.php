@@ -38,16 +38,12 @@
             }
         }
     </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="blog.css" rel="stylesheet">
 </head>
 
 <body <?php body_class('stretched no-transition'); ?>>
 
-    <div class="container">
-        <header class="blog-header py-3">
+    <div class="container-fluid">
+        <header class="blog-header py-3 ms-3 me-3">
             <div class="row flex-nowrap justify-content-between align-items-center">
                 <div class="col-4 pt-1">
                     <a class="link-secondary" href="#">Subscribe</a>
@@ -70,20 +66,23 @@
 
         <hr>
 
-        <div class="nav-scroller py-1 mb-2">
-            <nav class="nav d-flex justify-content-between">
-                <a class="p-2 link-secondary" href="#">World</a>
-                <a class="p-2 link-secondary" href="#">U.S.</a>
-                <a class="p-2 link-secondary" href="#">Technology</a>
-                <a class="p-2 link-secondary" href="#">Design</a>
-                <a class="p-2 link-secondary" href="#">Culture</a>
-                <a class="p-2 link-secondary" href="#">Business</a>
-                <a class="p-2 link-secondary" href="#">Politics</a>
-                <a class="p-2 link-secondary" href="#">Opinion</a>
-                <a class="p-2 link-secondary" href="#">Science</a>
-                <a class="p-2 link-secondary" href="#">Health</a>
-                <a class="p-2 link-secondary" href="#">Style</a>
-                <a class="p-2 link-secondary" href="#">Travel</a>
-            </nav>
-        </div>
-    </div>
+        <nav id="primary-menu" class="style-2">
+
+            <div class="container clearfix">
+
+                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                <?php
+                if (has_nav_menu('primary')) {
+                    wp_nav_menu([
+                        'theme_location'    => 'primary',
+                        'container'         => false,
+                        'fallback_cb'       => false, //this key allows to call a function display a default menu, false to not want to display a default menu or html
+                        'deph'              => 4, // how manu submenus the use can have currently
+                        // 'walker'            => new JU_Custom_Nav_Walker() study how to do a intervenction on menu walker class
+                        // 'menu_class'        => 'classes'
+                    ]);
+                }
+                ?>
+            </div>
+        </nav>
