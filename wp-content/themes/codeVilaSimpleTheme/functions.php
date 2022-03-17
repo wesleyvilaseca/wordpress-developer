@@ -13,6 +13,8 @@ include(get_theme_file_path('includes/setup.php'));
 
 include(get_theme_file_path('includes/widgets.php'));
 
+include(get_theme_file_path('includes/custom-nav-walker.php'));
+
 /**
  * hooks
  */

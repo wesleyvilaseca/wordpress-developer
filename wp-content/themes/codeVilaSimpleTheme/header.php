@@ -66,23 +66,25 @@
 
         <hr>
 
-        <nav id="primary-menu" class="style-2">
-
-            <div class="container clearfix">
-
-                <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-                <?php
-                if (has_nav_menu('primary')) {
-                    wp_nav_menu([
-                        'theme_location'    => 'primary',
-                        'container'         => false,
-                        'fallback_cb'       => false, //this key allows to call a function display a default menu, false to not want to display a default menu or html
-                        'deph'              => 4, // how manu submenus the use can have currently
-                        // 'walker'            => new JU_Custom_Nav_Walker() study how to do a intervenction on menu walker class
-                        // 'menu_class'        => 'classes'
-                    ]);
-                }
-                ?>
+        <nav class="navbar navbar-expand-lg navbar-light mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Blog Name</a>
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <?php
+                    if (has_nav_menu('primary')) {
+                        wp_nav_menu([
+                            'theme_location'    => 'primary',
+                            'container'         => false,
+                            'fallback_cb'       => false, //this key allows to call a function display a default menu, false to not want to display a default menu or html
+                            'deph'              => 4, // how manu submenus the use can have currently
+                            'items_wrap'        => '<ul id="%1$s" class="navbar-nav ms-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
+                            'walker'            => new JU_Custom_Nav_Walker()
+                        ]);
+                    }
+                    ?>
+                </div>
             </div>
         </nav>
