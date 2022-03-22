@@ -6,8 +6,8 @@
             <div class="postcontent nobottommargin clearfix">
 
                 <?php
-                if (have_posts()) {
-                    while (have_posts()) {
+                if (have_posts()) :
+                    while (have_posts()) :
                         the_post();
                         global $post;
                         $author_id          = $post->post_author;
@@ -15,7 +15,6 @@
                 ?>
 
                         <div class="single-post nobottommargin">
-
 
                             <div class="entry clearfix">
 
@@ -75,7 +74,6 @@
                             </div>
 
                             <div class="line"></div>
-
 
                             <div class="card">
                                 <div class="card-header">
@@ -144,17 +142,16 @@
                                 ?>
                             </div>
 
-
                             <?php
-                            if (comments_open() || get_comments_number()) {
+                            if (comments_open() || get_comments_number()) :
                                 comments_template();
-                            }
+                            endif;
                             ?>
 
                         </div>
                 <?php
-                    }
-                }
+                    endwhile;
+                endif;
                 ?>
             </div>
 
