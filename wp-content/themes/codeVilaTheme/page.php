@@ -20,27 +20,20 @@
         <div class="container clearfix">
             <div class="postcontent nobottommargin clearfix">
                 <?php
-
                 while (have_posts()) :
                     the_post();
-
                     global $post;
                     $author_ID          =   $post->post_author;
                     $author_URL         =   get_author_posts_url($author_ID);
-
                 ?>
-
                     <?php
-
                     the_content();
-
-                    $defaults = array(
+                    $defaults = [
                         'before'           => '<p class="text-center">' . __('Pages:', 'codVilaSimpleTheme'),
                         'after'            => '</p>',
-                    );
+                    ];
 
                     wp_link_pages($defaults);
-
                     ?>
                 <?php endwhile; ?>
 
