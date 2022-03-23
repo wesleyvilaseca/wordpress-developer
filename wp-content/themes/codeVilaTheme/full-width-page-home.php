@@ -66,6 +66,13 @@ while (have_posts()) :
         </div>
     </section>
 
+    <?php if (get_theme_mod('ju_google_location_latitude_handle') and get_theme_mod('ju_google_location_longitude_handle')) : ?>
+        <section id="google-location" class="mt-5">
+            <h3 class="text-center ">Find me</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.244656835213!2d<?php echo get_theme_mod('ju_google_location_latitude_handle') ?>!3d<?php echo get_theme_mod('ju_google_location_longitude_handle') ?>!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x173331575dfeebe0!2sBIZARRO&#39;S%20SKATEBOARD%20SHOP!5e0!3m2!1spt-BR!2sbr!4v1648050297768!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+    <?php endif; ?>
+
     <style>
         .wppsac-post-slider .wppsac-post-image-bg {
             min-height: 500px;

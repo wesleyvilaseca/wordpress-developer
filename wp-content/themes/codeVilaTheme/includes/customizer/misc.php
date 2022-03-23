@@ -16,6 +16,14 @@ function ju_misc_customizer_section($wp_customize)
         'default' => 'Copyrights &copy; 2022 all Rights Reserved'
     ]);
 
+    $wp_customize->add_setting('ju_google_location_latitude_handle', [
+        'default' => '-1.43748'
+    ]);
+
+    $wp_customize->add_setting('ju_google_location_longitude_handle', [
+        'default' => '-48.45656'
+    ]);
+
     $wp_customize->add_setting('ju_footer_tos_page', [
         'default' => 0
     ]);
@@ -89,6 +97,26 @@ function ju_misc_customizer_section($wp_customize)
             'label'     => __('Copyright', 'codeVilaTheme'),
             'section'   => 'ju_misc_section',
             'settings'  => 'ju_footer_cpoyright_text',
+        ]
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'ju_google_location_latitude_handle_input',
+        [
+            'label'     => __('Latitude', 'codeVilaTheme'),
+            'section'   => 'ju_misc_section',
+            'settings'  => 'ju_google_location_latitude_handle',
+        ]
+    ));
+
+    $wp_customize->add_control(new WP_Customize_Control(
+        $wp_customize,
+        'ju_google_location_longitude_handle_input',
+        [
+            'label'     => __('Longitude', 'codeVilaTheme'),
+            'section'   => 'ju_misc_section',
+            'settings'  => 'ju_google_location_longitude_handle',
         ]
     ));
 
