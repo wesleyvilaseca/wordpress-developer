@@ -1,9 +1,4 @@
 <?php
-
-/**
- * Template Name: Full Width Page Home
- */
-
 get_header()
 
 ?>
