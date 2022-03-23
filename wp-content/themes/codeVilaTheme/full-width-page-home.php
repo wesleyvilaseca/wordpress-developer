@@ -24,7 +24,7 @@ while (have_posts()) :
     </section>
 
     <section id="slide">
-        <?php echo do_shortcode('[recent_post_slider design="design-2" limit="5"]') ?>
+        <?php echo do_shortcode('[recent_post_slider design="design-' . get_theme_mod('ju_slide_type') . '" limit="' . get_theme_mod('ju_slide_limit') . '"]') ?>
     </section>
 
     <?php if (is_active_sidebar('ju_services1') || is_active_sidebar('ju_services2') || is_active_sidebar('ju_services3')) : ?>
