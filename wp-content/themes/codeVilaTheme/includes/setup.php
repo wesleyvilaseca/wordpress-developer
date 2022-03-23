@@ -98,4 +98,6 @@ function ju_setup_theme()
             ]
         );
     }
+
+    load_theme_textdomain('codeVilaTheme', get_template_directory() . '/languages/');
 }

@@ -28,6 +28,7 @@ add_action('widgets_init',              'ju_widgets');
 add_action('customize_register',        'ju_customize_register'); // this is the hook to set up the theme customizer
 add_action('customize_preview_init',    'ju_customize_preview_init');
 
+
 /**
  * shortcodes
  */

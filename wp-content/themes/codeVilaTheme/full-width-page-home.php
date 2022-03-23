@@ -26,6 +26,23 @@ while (have_posts()) :
     <section id="slide">
         <?php echo do_shortcode('[recent_post_slider design="design-' . get_theme_mod('ju_slide_type') . '" limit="' . get_theme_mod('ju_slide_limit') . '"]') ?>
     </section>
+    
+    <div style="margin: 50px auto 20px auto; width: 100px; border-bottom:none; border-top: 4px solid #444; border-radius:5px;"></div>
+
+    <section id="content">
+        <div class="content-wrap">
+            <div class="container clearfix">
+                <div class="postcontent nobottommargin clearfix">
+                    <?php
+                    the_content();
+                    $defaults = [
+                        'before'           => '<p class="text-center">' . __('Pages:', 'codVilaSimpleTheme'),
+                        'after'            => '</p>',
+                    ];
+                    ?>
+                </div>
+            </div>
+    </section>
 
     <?php if (is_active_sidebar('ju_services1') || is_active_sidebar('ju_services2') || is_active_sidebar('ju_services3')) : ?>
         <div style="margin: 50px auto 20px auto; width: 100px; border-bottom:none; border-top: 4px solid #444; border-radius:5px;"></div>
