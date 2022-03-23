@@ -24,13 +24,14 @@ while (have_posts()) :
     </section>
 
     <section id="slide">
-        <?php echo do_shortcode('[recent_post_slider design="design-1"]') ?>
+        <?php echo do_shortcode('[recent_post_slider design="design-2" limit="5"]') ?>
     </section>
 
     <?php if (is_active_sidebar('ju_services1') || is_active_sidebar('ju_services2') || is_active_sidebar('ju_services3')) : ?>
-        <section id="services_widgets">
+        <div style="margin: 50px auto 20px auto; width: 100px; border-bottom:none; border-top: 4px solid #444; border-radius:5px;"></div>
+        <section id="services_widgets" class="mt-5">
             <div class="container">
-                <h1 class="text-center">Our Services</h1>
+                <h3 class="text-center">Our Services</h3>
                 <div class="row">
                     <div class="col-sm-4">
                         <?php dynamic_sidebar('ju_services1'); ?>
@@ -46,6 +47,7 @@ while (have_posts()) :
         </section>
     <?php endif; ?>
 
+    <div style="margin: 50px auto 20px auto; width: 100px; border-bottom:none; border-top: 4px solid #444; border-radius:5px;"></div>
     <section class="bg-light mt-5">
         <div class="ms-3 me-3 row">
             <h3 class="text-center ">Latest Posts</h3>
@@ -63,6 +65,17 @@ while (have_posts()) :
             ?>
         </div>
     </section>
+
+    <style>
+        .wppsac-post-slider .wppsac-post-image-bg {
+            min-height: 500px;
+        }
+
+        .wppsac-post-content-left {
+            display: flex;
+            align-items: center;
+        }
+    </style>
 
 <?php
 endwhile;
