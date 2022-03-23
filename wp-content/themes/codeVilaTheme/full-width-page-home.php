@@ -16,12 +16,15 @@ while (have_posts()) :
         <div class="container clearfix">
             <h1><?php the_title() ?></h1>
             <span> <?php
-                    if (function_exists('the_subtitle')) {
+                    if (function_exists('the_subtitle'))
                         the_subtitle();
-                    }
                     ?>
             </span>
         </div>
+    </section>
+
+    <section id="slide">
+        <?php echo do_shortcode('[recent_post_slider design="design-1"]') ?>
     </section>
 
     <?php if (is_active_sidebar('ju_services1') || is_active_sidebar('ju_services2') || is_active_sidebar('ju_services3')) : ?>

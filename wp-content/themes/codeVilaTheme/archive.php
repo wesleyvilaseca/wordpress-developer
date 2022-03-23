@@ -16,8 +16,8 @@
             <div class="postcontent nobottommargin clearfix">
                 <div id="posts">
                     <?php
-                    if (have_posts()) :
-                        while (have_posts()) :
+                    if (have_posts()) {
+                        while (have_posts()) {
                             the_post();
 
                             //content-excerpt.php
@@ -25,8 +25,8 @@
 
                             //1) content-excerpt.php 2) content.php
                             get_template_part('partials/post/content', 'excerpt');
-                        endwhile;
-                    endif;
+                        }
+                    }
                     ?>
                 </div>
 
