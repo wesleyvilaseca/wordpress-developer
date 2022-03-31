@@ -1,3 +1,3 @@
 <?php
-#silence is golden
+#o silêncio é a ausência de ruídos 
 

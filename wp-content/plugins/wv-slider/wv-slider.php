@@ -25,8 +25,15 @@ if (!class_exists('WV_Slider')) {
         function __construct()
         {
             self::define_constants();
+
+            //menu "especial"
+            add_action('admin_menu', [$this, 'add_menu']);
+
             require_once(WV_SLIDER_PATH . 'post-types/class.wv-slider-cpt.php');
+            require_once(WV_SLIDER_PATH . 'class.wv-slider-settings.php');
+
             $WV_Slider_Post_Type = new WV_Slider_Post_Type();
+            $WV_Slider_Settings = new WV_Slider_Settings();
         }
 
         public static function define_constants()
@@ -51,6 +58,55 @@ if (!class_exists('WV_Slider')) {
 
         public static function uninstall()
         {
+        }
+
+        public function add_menu()
+        {
+            // add_theme_page(
+            // add_plugins_page(
+            add_menu_page(
+                'WV Slider Options',
+                'WV Slider',
+                'manage_options',
+                'wv_slider_admin',
+                [$this, 'wv_slider_settings_page'],
+                'dashicons-images-alt2',
+                // 10
+            );
+
+            add_submenu_page(
+                'wv_slider_admin',
+                'Manage Slides',
+                'Manage Slides',
+                'manage_options',
+                'edit.php?post_type=wv-slider',
+                null,
+                null
+            );
+
+            add_submenu_page(
+                'wv_slider_admin',
+                'Add new Slide',
+                'Add new Slide',
+                'manage_options',
+                'post-new.php?post_type=wv-slider',
+                null,
+                null
+            );
+        }
+
+        public function wv_slider_settings_page()
+        {
+            if (!current_user_can('manage_options'))
+                return;
+
+            if (@$_GET['settings-updated']) {
+                add_settings_error('wv_slider_options', 'wv_slider_message', 'Settings saved', 'success');
+            }
+
+            settings_errors('wv_slider_options');
+
+            require(WV_SLIDER_PATH . "views/settings-page.php");
         }
     }
 }

@@ -16,6 +16,6 @@ function r_activate_plugin()
         PRIMARY KEY (`ID`)
     )ENGINE=InnoDB " . $wpdb->get_charset_collate() . ";";
 
-    // require(ABSPATH . "/wp-admin/includes/upgrade.php");
+    require(ABSPATH . "/wp-admin/includes/upgrade.php");
     dbDelta($createSQL, true);
 }
