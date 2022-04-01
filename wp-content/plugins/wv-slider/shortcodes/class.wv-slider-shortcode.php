@@ -29,9 +29,10 @@ if (!class_exists('WV_Slider_Shortcode')) {
             ob_start();
             require(WV_SLIDER_PATH . 'views/wv-slider_shortcode.php');
             wp_enqueue_script('wv-slider-main-jq');
-            wp_enqueue_script('wv-slider-options-js');
+            // wp_enqueue_script('wv-slider-options-js');
             wp_enqueue_style('wv-slider-main-css');
             wp_enqueue_style('wv-slider-style-css');
+            wv_slider_options();
 
             return ob_get_clean();
         }

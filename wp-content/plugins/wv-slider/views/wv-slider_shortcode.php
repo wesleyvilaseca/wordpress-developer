@@ -1,5 +1,5 @@
 <h3><?php echo !@$content ? WV_Slider_Settings::$options['wv_slider_title'] :  $content  ?></h3>
-<div class="wv-slider flexslider">
+<div class="wv-slider flexslider <?php echo @isset(WV_Slider_Settings::$options['wv_slider_style']) ? esc_attr(WV_Slider_Settings::$options['wv_slider_style']) : 'style-1' ?>">
     <ul class="slides">
         <?php
 
@@ -21,7 +21,12 @@
 
         ?>
                 <li>
-                    <?php the_post_thumbnail('full', ['class' => 'img-fluid']) ?>
+                    <?php
+                    if (has_post_thumbnail())
+                        the_post_thumbnail('full', ['class' => 'img-fluid']);
+                    else
+                        echo "<img src='" . WV_SLIDER_URL . "assets/images/grey.jpg' class='img-fluid wp-post-image' />";
+                    ?>
                     <div class="wvs-container">
                         <div class="slider-details-container">
                             <div class="wrapper">
