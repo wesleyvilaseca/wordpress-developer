@@ -32,7 +32,7 @@ class Wprps_Admin {
 		add_filter('manage_category_custom_column', array( $this, 'wppsac_category_columns' ), 10, 3);
 
 		// Action to add little JS code in admin footer
-		add_action( 'admin_footer', array($this, 'wprps_upgrade_page_link_blank') );
+		//add_action( 'admin_footer', array($this, 'wprps_upgrade_page_link_blank') );
 	}
 
 	/**
@@ -49,8 +49,11 @@ class Wprps_Admin {
 		// Setting page
 		add_submenu_page( 'wprps-about', __('Solutions & Features - Responsive Recent Post Slider', 'wp-responsive-recent-post-slider'), '<span style="color:#2ECC71">'. __('Solutions & Features', 'wp-responsive-recent-post-slider').'</span>', 'manage_options', 'wprps-solutions-features', array($this, 'wprps_solutions_features_page') );
 
+		// Premium page load
+		add_submenu_page( 'wprps-about', __('Upgrade To PRO - Responsive Recent Post Slider', 'wp-responsive-recent-post-slider'), '<span style="color:#ff2700">' . __('Upgrade To Premium ', 'wp-responsive-recent-post-slider') . '</span>', 'manage_options', 'wprps-premium', array($this, 'wprps_premium_page') );
+
 		// Register plugin premium page
-		add_submenu_page( 'wprps-about', __('Upgrade To PRO - Responsive Recent Post Slider', 'wp-responsive-recent-post-slider'), '<span class="wpos-upgrade-pro" style="color:#ff2700">' . __('Upgrade To Premium ', 'wp-responsive-recent-post-slider') . '</span>', 'manage_options', 'wprps-upgrade-pro', array($this, 'wprps_redirect_page') );
+		//add_submenu_page( 'wprps-about', __('Upgrade To PRO - Responsive Recent Post Slider', 'wp-responsive-recent-post-slider'), '<span class="wpos-upgrade-pro" style="color:#ff2700">' . __('Upgrade To Premium ', 'wp-responsive-recent-post-slider') . '</span>', 'manage_options', 'wprps-upgrade-pro', array($this, 'wprps_redirect_page') );
 		//add_submenu_page( 'wprps-about', __('Bundle Deal - Responsive Recent Post Slider', 'wp-responsive-recent-post-slider'), '<span class="wpos-upgrade-pro" style="color:#ff2700">' . __('Bundle Deal', 'wp-responsive-recent-post-slider') . '</span>', 'manage_options', 'wprps-bundle-deal', array($this, 'wprps_redirect_page') );
 	}
 
@@ -73,17 +76,17 @@ class Wprps_Admin {
 	 * @package WP Responsive Recent Post Slider
 	 * @since 1.0.0
 	 */
-	// function wprps_premium_page() {
-	// 	include_once( WPRPS_DIR . '/includes/admin/settings/trail-premium.php' );
-	// }
+	function wprps_premium_page() {
+		include_once( WPRPS_DIR . '/includes/admin/settings/premium.php' );
+	}
 
 	/**
 	 * How It Work Page Html
 	 * 
 	 * @since 1.0
 	 */
-	function wprps_redirect_page() {
-	}
+	// function wprps_redirect_page() {
+	// }
 
 	/**
 	 * Function to notification transient
@@ -93,9 +96,9 @@ class Wprps_Admin {
 	 */
 	function wprps_admin_init_process() {
 
-		global $pagenow;
+		// global $pagenow;
 
-		$current_page = isset( $_REQUEST['page'] ) ? $_REQUEST['page'] : '';
+		// $current_page = isset( $_REQUEST['page'] ) ? $_REQUEST['page'] : '';
 
 		// If plugin notice is dismissed
 	    if( isset($_GET['message']) && $_GET['message'] == 'wprps-plugin-notice' ) {
@@ -103,20 +106,20 @@ class Wprps_Admin {
 	    }
 
 	    // Redirect to external page for upgrade to menu
-	    if( $pagenow == 'admin.php' ) {
+	    // if( $pagenow == 'admin.php' ) {
 
-	    	if( $current_page == 'wprps-upgrade-pro' ) {
+	    // 	if( $current_page == 'wprps-upgrade-pro' ) {
 
-	    		wp_redirect( WPRPS_PLUGIN_LINK_UPGRADE );
-	    		exit;
-	    	}
+	    // 		wp_redirect( WPRPS_PLUGIN_LINK_UPGRADE );
+	    // 		exit;
+	    // 	}
 
-	    	if( $current_page == 'wprps-bundle-deal' ) {
+	    // 	if( $current_page == 'wprps-bundle-deal' ) {
 
-	    		wp_redirect( WPRPS_PLUGIN_BUNDLE_LINK );
-	    		exit;
-	    	}
-	    }
+	    // 		wp_redirect( WPRPS_PLUGIN_BUNDLE_LINK );
+	    // 		exit;
+	    // 	}
+	    // }
 	}
 
 	/**
@@ -170,7 +173,7 @@ class Wprps_Admin {
 	 * @package WP Responsive Recent Post Slider
 	 * @since 1.0.0
 	 */
-	function wprps_upgrade_page_link_blank() {
+	/*function wprps_upgrade_page_link_blank() {
 
 		global $wpos_upgrade_link_snippet;
 
@@ -185,7 +188,7 @@ class Wprps_Admin {
 			})(jQuery);
 		</script>
 	<?php }
-	}
+	} */
 }
 
 $wprps_admin = new Wprps_Admin();

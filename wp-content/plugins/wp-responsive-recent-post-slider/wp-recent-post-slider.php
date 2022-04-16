@@ -6,7 +6,7 @@
  * Domain Path: /languages/
  * Description: Add and display Responsive WordPresss Recent Post Slider and Carousel on your website with 4 designs (Slider) and 1 designs (Carousel) using a shortcode. Also added Gutenberg block support. 
  * Author: WP OnlineSupport, Essential Plugin
- * Version: 3.0.7
+ * Version: 3.0.8
  * Author URI: https://www.essentialplugin.com/wordpress-plugin/wp-responsive-recent-post-slider/
  *
  * @package WordPress
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  */
 
 if( ! defined( 'WPRPS_VERSION' ) ) {
-	define( 'WPRPS_VERSION', '3.0.7' ); // Version of plugin
+	define( 'WPRPS_VERSION', '3.0.8' ); // Version of plugin
 }
 
 if( ! defined( 'WPRPS_NAME' ) ) {
@@ -58,6 +58,10 @@ if( ! defined( 'WPRPS_PLUGIN_LINK_UNLOCK' ) ) {
 
 if( ! defined( 'WPRPS_PLUGIN_LINK_UPGRADE' ) ) {
 	define('WPRPS_PLUGIN_LINK_UPGRADE','https://www.essentialplugin.com/wordpress-plugin/wp-responsive-recent-post-slider/?utm_source=WP&utm_medium=RecentPostSlider&utm_campaign=Upgrade-PRO#wpos-epb'); // Plugin Check link
+}
+
+if( ! defined( 'WPRPS_PLUGIN_LINK_WELCOME' ) ) {
+	define('WPRPS_PLUGIN_LINK_WELCOME','https://www.essentialplugin.com/wordpress-plugin/wp-responsive-recent-post-slider/?utm_source=WP&utm_medium=RecentPostSlider&utm_campaign=Welcome-Screen#wpos-epb'); // Plugin Check link
 }
 
 if( ! defined( 'WPRPS_SITE_LINK' ) ) {

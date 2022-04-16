@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <div class="wrap">
 
-	<h2><?php _e( 'WP Responsive Recent Post Slider with', 'wp-responsive-recent-post-slider' ); ?><span class="h-blue"> <?php _e( 'Essential Plugin Bundle', 'wp-responsive-recent-post-slider' ); ?></span></h2>
+	<h2><?php _e( 'WP Responsive Recent Post Slider', 'wp-responsive-recent-post-slider' ); ?></h2>
 
 	<style>
 		.wpos-plugin-pricing-table thead th h2{font-weight: 400; font-size: 2.4em; line-height:normal; margin:0px; color: #2ECC71;}
@@ -85,79 +85,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</style>
 	
 	<div id="poststuff">
-		<div id="post-body" class="metabox-holder columns-2">
+		<div id="post-body" class="metabox-holder">
 			<div id="post-body-content">
-				<h3 class="larger-font"><?php _e( 'Well <span style="color:#388e3c"> optimized</span>, <span style="color:#7b1fa2">light weight</span> & <span style="color:#3e50b4">expandable</span> plugins <br /> for <span style="background:#ff4081; color:#fff;">web site, landing pages &amp; conversions</span>', 'wp-responsive-recent-post-slider' ); ?></h3>
-				<h3 class=""><?php _e( 'Multiple pre-built template options with <span class="h-orange"> Gutenberg, DIVI, Elementor, Avada, VC/WPbakery </span>etc page builder/themes', 'wp-responsive-recent-post-slider' ); ?></h3>
-				<h3 class="larger-font"><?php _e( '<span class="h-blue">46 plugins</span>, <span class="h-blue">10 sliders</span> with <span class="h-blue">2000+</span> pre-built templates in <span class="h-blue">Essential Bundle</span>', 'wp-responsive-recent-post-slider' ); ?></h3>
-				<h3 style="text-align:center;"><?php _e( 'Top plugins category wise:', 'wp-responsive-recent-post-slider' ); ?></h3>
-				
-				<table class="wpos-plugin-pricing-table wpos-about-epb-table">
-					<thead>
-						<tr>
-							<th>Web Site</th>
-							<th>Landing Pages</th>
-							<th>Conversions</th>	    		
-						</tr>
-						<tr>
-							<td>
-								<ul>
-									<li>Logo Showcase Responsive Slider</li>
-									<li>Responsive Recent Post Slider</li>
-									<li>Slick Slider and Image Carousel</li>
-									<li>Blog Designer – Post and Widget</li>
-									<li>Album and Image Gallery plus Lightbox</li>
-									<li>Essential Security</li>
-								</ul>
-								<div class="wp-plugin-icon">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/utility-50.png" width="26">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/security-icon.png" width="26">
-								</div>
-							</td>
-							<td>
-								<ul>
-									<li>Popup Anything – A Marketing Popup</li>
-									<li>Countdown Timer Ultimate</li>
-									<li>Woo Product Slider and Carousel</li>
-									<li>Pricing Table Ultimate Pro</li>
-									<li> Social Proof</li>
-									<li> Whatsapp Chat Support</li>
-									
-								</ul>
-								<div class="wp-plugin-icon">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/utility-50.png" width="26">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/inboundwp-50.png" width="26">
-								</div>
-							</td>
-							<td>
-								<ul>
-									<li>Popup Anything – A Marketing Popup</li>
-									<li>Countdown Timer Ultimate</li>
-									<li>SlidersPack</li>
-									<li>Testimonial with Widget</li>
-									<li>Social Proof</li>
-									<li>Whatsapp Chat Support</li>
-								</ul>
-								<div class="wp-plugin-icon">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/utility-50.png" width="26">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/inboundwp-50.png" width="26">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/SlidersPack-50.png" width="26">
-									<img src="<?php echo WPRPS_URL; ?>assets/images/security-icon.png" width="26">
-								</div>
-							</td>
-						</tr>
-					</thead>
-				</table>
-				<div class="wp-icons">
-					<ul>
-						<li><img src="<?php echo WPRPS_URL; ?>assets/images/utility-50.png" width="18"> - Utility Plugin (Total 39), </li>
-						<li><img src="<?php echo WPRPS_URL; ?>assets/images/inboundwp-50.png" width="15">  -  Inbound Maketing (Total 6), </li>
-						<li><img src="<?php echo WPRPS_URL; ?>assets/images/SlidersPack-50.png" width="16">  -  SlidersPack (Total 10), </li>
-						<li><img src="<?php echo WPRPS_URL; ?>assets/images/security-icon.png" width="16">  -  Essnetial Security</li>
-					</ul>
-					<a class="epb-cutom-button" href="<?php echo WPRPS_SITE_LINK; ?>/pricing/?utm_source=WP&utm_medium=Post-Slider&utm_campaign=Upgrade-PRO-Top-Cat" target="_blank">Buy Now</a>
-				</div>
-
 				<h3 style="text-align:center"><?php _e( 'Compare "WP Responsive Recent Post Slider/Carousel" Free VS Pro', 'wp-responsive-recent-post-slider' ); ?></h3>
 						<table class="wpos-plugin-pricing-table">
 							<colgroup></colgroup>
@@ -171,8 +100,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 									</th>
 									<th>
 										<h2 class="wpos-epb">Premium</h2>
-										<p>Gain access to <strong>WP Responsive Recent Post Slider</strong> included in <br /><strong class="wpos-epb">Essential Plugin Bundle</strong></p>
-										<a href="<?php echo WPRPS_SITE_LINK; ?>/pricing/?utm_source=WP&utm_medium=Post-Slider&utm_campaign=Upgrade-PRO" target="_blank">Buy Now</a>
+										<a href="<?php echo WPRPS_PLUGIN_LINK_UPGRADE; ?>" target="_blank">Buy Now</a>
 									</th>
 								</tr>
 							</thead>
@@ -181,8 +109,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<tr>
 									<th></th>
 									<td></td>
-									<td><p>Gain access to <strong>WP Responsive Recent Post Slider</strong> included in <br /><strong>Essential Plugin Bundle</strong></p>
-									<a href="<?php echo WPRPS_SITE_LINK; ?>/pricing/?utm_source=WP&utm_medium=Post-Slider&utm_campaign=Upgrade-PRO" target="_blank">Buy Now</a></td>
+									<td>
+									<a href="<?php echo WPRPS_PLUGIN_LINK_UPGRADE; ?>" target="_blank">Buy Now</a></td>
 								</tr>
 							</tfoot>
 
@@ -324,21 +252,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 								</tr>
 							</tbody>
 						</table>
-			</div>	
-				<!--Upgrad to Pro HTML -->
-					<div id="postbox-container-1" class="postbox-container wpos-sidebar">
-						<div class="wpos-epb-wrap">
-							<h2><span>Well, What's inside our</span> Essential Plugin Bundle?</h2>
-							<ul>
-								<li><b>40+ Utility Plugins</b> including <span><?php echo WPRPS_NAME; ?> premium </span> version.</li>
-								<li><b>Inbound Marketing</b> with popup anything - a marketing popup tools that makes your visitors engage.</li>
-								<li><b>10+ Sliderspack</b> for the best post, image &amp; logo sliders.</li>
-								<li><b>Popup Anything a Marketing Popup</b> engage with customers, subscribers, leads and sales with Popup Anything.</li>
-							</ul>			
-							<p>with the best themes compatibility</b> & at the most <b>competitive price</b> ever the <b>ultimate bundle</b> with all our premium <b>essential plugins</b> in one single bundle.</p>
-							<a class="button-yellow button-orange" style="margin-bottom:0px;" href="<?php echo WPRPS_SITE_LINK; ?>/essential-bundle/?utm_source=WP&utm_medium=Post-Slider&utm_campaign=EPB-Upgrade-PRO" target="_blank">Buy Now</a>
-						</div>
-					</div><!-- #post-container-1 -->
 			</div>
-		</div>			
+		</div>
+	</div>			
 </div>

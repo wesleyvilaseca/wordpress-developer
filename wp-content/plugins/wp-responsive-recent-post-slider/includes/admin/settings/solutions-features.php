@@ -24,7 +24,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 						<div class="wprps-sf-subtitle">Getting Started</div>
 						<h2 class="wprps-sf-title">Welcome to Recent Post Slider</h2>
 						<p class="wprps-sf-content">Get your website & blog a slide-wise display to show your recent blogs/posts in a slider/carousel form with excerpts and unique slider & carousel designs.</p>
-						<a href="<?php echo esc_url( $popup_add_link ); ?>" class="wprps-sf-btn">Launch Recent Post Slider</a></br> <b>OR</b> </br><a href="<?php echo WPRPS_PLUGIN_LINK_UNLOCK; ?>"  target="_blank" class="wprps-sf-btn wprps-sf-btn-orange">Grab Now Pro Features</a>
+						<a href="<?php echo esc_url( $popup_add_link ); ?>" class="wprps-sf-btn">Launch Recent Post Slider</a></br> <b>OR</b> </br><a href="<?php echo WPRPS_PLUGIN_LINK_WELCOME; ?>"  target="_blank" class="wprps-sf-btn wprps-sf-btn-orange">Grab Now Pro Features</a>
 						<div class="wprps-rc-wrap">
 							<div class="wprps-rc-inr wprps-rc-bg-box">
 								<div class="wprps-rc-icon">
@@ -40,7 +40,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 									<img src="<?php echo esc_url( WPRPS_URL ); ?>assets/images/popup-icon/popup-design.png" alt="popup-design" title="popup-design" />
 								</div>
 								<div class="wprps-rc-cont">
-									<h3>Include Done-For-You Recent Post Slider Setup ($99 Value)</h3>
+									<h3>Include Done-For-You Recent Post Slider Setup</h3>
 									<p>Our  experts team will design 1 free Recent Post Slider for you as per your need.</p>
 								</div>
 							</div>
@@ -152,7 +152,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 							Center Mode View</li> -->
 						</ul>
 					</div>
-					<a href="<?php echo WPRPS_PLUGIN_LINK_UNLOCK; ?>" target="_blank" class="wprps-sf-btn wprps-sf-btn-orange"><span class="dashicons dashicons-cart"></span> Grab Now Pro Features</a>
+					<a href="<?php echo WPRPS_PLUGIN_LINK_WELCOME; ?>" target="_blank" class="wprps-sf-btn wprps-sf-btn-orange"><span class="dashicons dashicons-cart"></span> Grab Now Pro Features</a>
 					<div class="wprps-rc-wrap">
 						<div class="wprps-rc-inr wprps-rc-bg-box">
 							<div class="wprps-rc-icon">
@@ -168,7 +168,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 								<img src="<?php echo esc_url( WPRPS_URL ); ?>assets/images/popup-icon/popup-design.png" alt="popup-design" title="popup-design" />
 							</div>
 							<div class="wprps-rc-cont">
-								<h3>Include Done-For-You Recent Post Slider Setup ($99 Value)</h3>
+								<h3>Include Done-For-You Recent Post Slider Setup</h3>
 								<p>Our  experts team will design 1 free Recent Post Slider for you as per your need.</p>
 							</div>
 						</div>
@@ -221,7 +221,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 							<div class="wprps-testimonial-rating"><img src="<?php echo WPRPS_URL; ?>/assets/images/rating.png" /></div>
 						</div>
 					</div>
-					<a href="https://wordpress.org/support/plugin/wp-responsive-recent-post-slider/reviews/?filter=5" target="_blank" class="wprps-sf-btn"><span class="dashicons dashicons-star-filled"></span> View All Reviews</a> OR <a href="<?php echo WPRPS_PLUGIN_LINK_UNLOCK; ?>"  target="_blank" class="wprps-sf-btn wprps-sf-btn-orange">Grab Now Pro Features</a>
+					<a href="https://wordpress.org/support/plugin/wp-responsive-recent-post-slider/reviews/?filter=5" target="_blank" class="wprps-sf-btn"><span class="dashicons dashicons-star-filled"></span> View All Reviews</a> OR <a href="<?php echo WPRPS_PLUGIN_LINK_WELCOME; ?>"  target="_blank" class="wprps-sf-btn wprps-sf-btn-orange">Grab Now Pro Features</a>
 					<div class="wprps-rc-wrap">
 						<div class="wprps-rc-inr wprps-rc-bg-box">
 							<div class="wprps-rc-icon">
@@ -237,7 +237,7 @@ $popup_add_link = add_query_arg( array( 'post_type' =>WPRPS_POST_TYPE ), admin_u
 								<img src="<?php echo esc_url( WPRPS_URL ); ?>assets/images/popup-icon/popup-design.png" alt="popup-design" title="popup-design" />
 							</div>
 							<div class="wprps-rc-cont">
-								<h3>Include Done-For-You Recent Post Slider Setup ($99 Value)</h3>
+								<h3>Include Done-For-You Recent Post Slider Setup</h3>
 								<p>Our  experts team will design 1 free Recent Post Slider for you as per your need.</p>
 							</div>
 						</div>
